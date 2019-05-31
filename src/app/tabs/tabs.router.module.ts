@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import {LoginPage } from '../login/login.page';
 
 const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
     children: [
+      {
+        path: 'login',
+        outlet: 'login',
+        component: LoginPage
+      },
       {
         path: 'tab1',
         children: [
